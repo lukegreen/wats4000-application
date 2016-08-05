@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/collection', {
+        templateUrl: 'views/collection.html',
+        controller: 'CollectionCtrl',
+        controllerAs: 'collection'
+      })
       .otherwise({
         redirectTo: '/'
       });
