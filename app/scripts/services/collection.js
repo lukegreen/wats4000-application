@@ -8,16 +8,19 @@
  * Factory in the wats4000ApplicationApp.
  */
 angular.module('wats4000ApplicationApp')
-  .factory('collection', function () {
+  .factory('collection', function ($resource) {
     // Service logic
     // ...
 
-    var meaningOfLife = 42;
 
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+        // Public API here
+         return $resource('https://bgg-json.azurewebsites.net/collection/:username?grouped=false', {}, {
+           query: {
+             method:'GET',
+             params:{
+               username: "Agnoxis"
+             },
+             isArray:true
+           }
+         });
+       });

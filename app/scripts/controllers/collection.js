@@ -8,10 +8,9 @@
  * Controller of the wats4000ApplicationApp
  */
 angular.module('wats4000ApplicationApp')
-  .controller('CollectionCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('CollectionCtrl', function ($scope, collection) {
+    $scope.collection = collection.query();
+
+     username: $routeParams.username;
+
   });
