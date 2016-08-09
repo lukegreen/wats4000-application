@@ -18,7 +18,7 @@ angular.module('wats4000ApplicationApp')
            query: {
              method:'GET',
              params:{
-               username: "Agnoxis"
+               username: 'Agnoxis'
              },
              isArray:true
            }
