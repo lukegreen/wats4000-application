@@ -1,18 +1,16 @@
 <div ng-controller="CollectionCtrl">
-<h1>Find a game collection</h1>
+  <h1>Find a game collection</h1>
 
-<div ng-init="username='Agnoxis'">
-  <label>Username:
-    <input type="text" name="username" ng-model="username">
-  </label>
-    <br>
-  <button class="btn btn-lg btn-primary" ng-click="findCollection()">Find Collection</button>
+  <div>
+    <label>Username:
+      <input type="text" name="username" ng-model="username">
+    </label>
+      <br>
+    <button class="btn btn-lg btn-primary" ng-click="findCollection()">Find Collection</button>
 
-</div>
+  </div>
 
+  <p>{{collection[0].name}}</p>
 
-
-<p>{{thisCollection[0].name}}</p>
-
-<p>test element</p>
+  <p>test element</p>
 </div>
