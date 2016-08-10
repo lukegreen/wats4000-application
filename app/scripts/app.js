@@ -17,6 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngStorage', //added to enagle local storage features
     'ngTouch'
   ])
   .config(function ($routeProvider) {
