@@ -31,7 +31,7 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/collection', {
+      .when('/collection/:username', {
         templateUrl: 'views/collection.html',
         controller: 'CollectionCtrl',
         controllerAs: 'collection'

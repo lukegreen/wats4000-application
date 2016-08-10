@@ -9,12 +9,16 @@
  */
 angular.module('wats4000ApplicationApp')
   .controller('CollectionCtrl', function ($scope, $routeParams, collection) {
-    $scope.collection = collection.query();
-    
-    $scope.username = $routeParams.username;
+    //$scope.collection = collection.query();
 
-    $scope.collection = collection.query({
-          username: $routeParams.username
-     });
+      $scope.username = $routeParams.username;
+
+
+
+       $scope.findCollection = function() {
+         $scope.thisCollection = collection.query({
+               username: $routeParams.username;
+          });
+       };
 
   });
