@@ -2,17 +2,18 @@
   <h1>Find a game collection</h1>
 
   <div>
-    <label>Username:
+    <label>BGG Username:
       <input type="text" name="username" ng-model="username">
     </label>
-      <br>
-    <button class="btn btn-lg btn-primary" ng-click="findCollection()">Find Collection</button>
+    <button class="btn btn-sm btn-primary" ng-click="findCollection()">Find Collection</button>
 
   </div>
 
   <div ng-if="username">
-    <p ng-repeat="game in collection">{{game.name}}</p>
+    <ul style="list-style: none">
+      <li ng-repeat="game in collection">{{game.name}}</li>
+    </ul>
   </div>
 
-  
+
 </div>
