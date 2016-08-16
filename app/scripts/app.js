@@ -37,6 +37,11 @@ angular
         controller: 'CollectionCtrl',
         controllerAs: 'collection'
       })
+      .when('/userCollection', {
+        templateUrl: 'views/usercollection.html',
+        controller: 'UsercollectionCtrl',
+        controllerAs: 'userCollection'
+      })
       .otherwise({
         redirectTo: '/'
       });

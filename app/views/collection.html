@@ -17,5 +17,14 @@
 
   <p><button class="btn btn-sm btn-primary" ng-click="saveUser()">Save Collection</button></p>
 
+  <div ng-if="storage.savedUsers">
+    <h2>Saved Collections</h2>
+      <ul style="list-style: none">
+        <li ng-repeat="user in storage.savedUsers">
+          <button class="btn btn-sm btn-info" ng-click="">{{user}}</button>
+        </li>
+      </ul>
+  </div>
+
 
 </div>

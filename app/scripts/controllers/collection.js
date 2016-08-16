@@ -20,10 +20,17 @@ angular.module('wats4000ApplicationApp')
       //Here we'll setup localStorage for usernames we want to keep
       $scope.saveUser = function(){
           var thisUser = $scope.username;
+          var thisCollection = $scope.collection;
+
+          thisCollection.username = thisUser;
+
           console.log(thisUser);
+          console.log(thisCollection);
+
 
     if (!$localStorage.savedUsers){
         $localStorage.savedUsers = [thisUser];
+        $localStorage.savedCollections = [thisCollection];
     } else {
         // We have already saved some cities.
         // Check to make sure we haven't already saved the current city.
@@ -37,10 +44,14 @@ angular.module('wats4000ApplicationApp')
         }
         if (save===true){
             $localStorage.savedUsers.push(thisUser);
+            $localStorage.savedCollections.push(thisCollection);
         } else {
             console.log('this username is already saved');
         }
       }
     };
-    
+
+    //define storage variable for use in the collections view
+    $scope.storage = $localStorage;
+
   });

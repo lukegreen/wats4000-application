@@ -8,6 +8,10 @@
  * Controller of the wats4000ApplicationApp
  */
 angular.module('wats4000ApplicationApp')
-  .controller('MainCtrl', function ($scope, hotness) {
+  .controller('MainCtrl', function ($scope, hotness, $localStorage) {
     $scope.hotness = hotness.query();
+    $scope.storage = $localStorage;
+
+    
+
   });
