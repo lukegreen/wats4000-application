@@ -21,9 +21,21 @@
     <h2>Saved Collections</h2>
       <ul style="list-style: none">
         <li ng-repeat="user in storage.savedUsers">
-          <button class="btn btn-sm btn-info" ng-click="">{{user}}</button>
+          <button class="btn btn-sm btn-info" ng-click="displayCollection()">{{user}}</button>
+          <ul>
+            <li ng-repeat="item in savedCollections.games">{{item}}</li>
+          </ul>
         </li>
       </ul>
+  </div
+
+  <div ng-messages="collectionSaved">
+      <p class="bg-success text-success" ng-message="success">
+           {{user}} has been saved to your list of collections.
+      </p>
+      <p class="bg-warning text-warning" ng-message="duplicate">
+          {{user}} has already been saved to your list of collections.
+      </p>
   </div>
 
 
