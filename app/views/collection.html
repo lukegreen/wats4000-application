@@ -17,25 +17,27 @@
 
   <p><button class="btn btn-sm btn-primary" ng-click="saveUser()">Save Collection</button></p>
 
+  <div ng-messages="collectionSaved">
+      <p class="bg-success text-success" ng-message="success">
+           This collection has been saved.
+      </p>
+      <p class="bg-warning text-warning" ng-message="duplicate">
+          This has already been saved to your list of collections.
+      </p>
+  </div>
+
   <div ng-if="storage.savedUsers">
     <h2>Saved Collections</h2>
       <ul style="list-style: none">
         <li ng-repeat="user in storage.savedUsers">
-          <button class="btn btn-sm btn-info" ng-click="displayCollection()">{{user}}</button>
-          <ul>
-            <li ng-repeat="item in savedCollections.games">{{item}}</li>
-          </ul>
+          <button class="btn btn-sm btn-info" ng-click="displayCollection(user)">{{user}}</button>
+          <p ng-if="thisUserCollection">{{thisUserCollection}}</p>
         </li>
       </ul>
-  </div
+  </div>
 
-  <div ng-messages="collectionSaved">
-      <p class="bg-success text-success" ng-message="success">
-           {{user}} has been saved to your list of collections.
-      </p>
-      <p class="bg-warning text-warning" ng-message="duplicate">
-          {{user}} has already been saved to your list of collections.
-      </p>
+  <div>
+    <p ng-model="testItem">{{testItem}}</p>
   </div>
 
 

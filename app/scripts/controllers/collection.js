@@ -36,7 +36,7 @@ angular.module('wats4000ApplicationApp')
           for (var x=0; x < thisCollection.length; ++x) {
           	var gameName = thisCollection[x].name;
           	userObject.games.push(gameName);
-          };
+          }
 
           var objectCheckTwo = userObject.games[0];
           console.log(objectCheckTwo);
@@ -76,9 +76,26 @@ angular.module('wats4000ApplicationApp')
     //define storage variable for use in the collections view
     $scope.storage = $localStorage;
 
-    /*$scope.displayCollection = function() {
-      var collectionVisible = $localStorage.savedCollections.games;
-      console.log(collectionVisible);
-    }*/
+    //a function to display saved collections
+
+    $scope.displayCollection = function(user) {
+      var buttonName = user;
+      console.log(buttonName);
+
+      var collectionArray = JSON.parse(localStorage.getItem(localStorage.key(0)));
+      //var userCollection = collectionArray[0].games;
+      for (var i=0; i <collectionArray.length; i++) {
+        if (collectionArray[i].user === buttonName){
+          $scope.thisUserCollection = collectionArray[i].games;
+        } else {
+          alert("Couldn't find this collection");  
+        }
+
+      }
+
+    };
+
+    //var objectOne = JSON.parse(localStorage.getItem(localStorage.key(0)));
+    //console.log(objectOne);
 
   });
