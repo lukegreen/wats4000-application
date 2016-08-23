@@ -5736,7 +5736,8 @@ button.close {
   padding: 0.2em 0; }
 
 body {
-  padding: 0; }
+  padding: 0;
+  background-color: #FFE1C4; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -5750,6 +5751,8 @@ body {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
   /* Make the masthead heading the same height as the navigation */ }
+  .header .navbar {
+    background-color: #E8D4C1; }
   .header h3 {
     margin-top: 0;
     margin-bottom: 0;
@@ -5768,10 +5771,14 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5; }
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #E8D4C1; }
   .jumbotron .btn {
     font-size: 21px;
     padding: 14px 24px; }
+
+.btn-info {
+  margin: 5px; }
 
 /* Supporting marketing content */
 .marketing {
@@ -5795,3 +5802,9 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0; } }
+
+div[ng-view].ng-enter {
+  animation: fadeIn 0.5s; }
+
+div[ng-view].ng-leave {
+  animation: fadeOut 0.5s; }
