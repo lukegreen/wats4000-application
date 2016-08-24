@@ -25,17 +25,20 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        activeTab: 'main'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controllerAs: 'about',
+        activeTab: 'about'
       })
       .when('/collection/:username', {
         templateUrl: 'views/collection.html',
         controller: 'CollectionCtrl',
-        controllerAs: 'collection'
+        controllerAs: 'collection',
+        activeTab: 'collection'
       })
       .otherwise({
         redirectTo: '/'
