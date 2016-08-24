@@ -31,14 +31,11 @@
       <ul style="list-style: none">
         <li ng-repeat="user in storage.savedUsers">
           <button class="btn btn-sm btn-info" ng-click="displayCollection(user)">{{user}}</button>
-          <p ng-if="thisUserCollection">{{thisUserCollection}}</p>
         </li>
       </ul>
   </div>
 
-  <div>
-    <p ng-model="testItem">{{testItem}}</p>
-  </div>
-
+<p ng-if="thisUserCollection">{{thisUserCollection}}</p>
+  
 
 </div>

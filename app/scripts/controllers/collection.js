@@ -88,7 +88,7 @@ angular.module('wats4000ApplicationApp')
         if (collectionArray[i].user === buttonName){
           $scope.thisUserCollection = collectionArray[i].games;
         } else {
-          alert("Couldn't find this collection");  
+          //alert("Couldn't find this collection");  
         }
 
       }
