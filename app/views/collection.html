@@ -1,6 +1,12 @@
 <div ng-controller="CollectionCtrl">
   <h1>Find a game collection</h1>
 
+  <br>
+
+  <p>For the purposes of testing this web app, try searching for the usernames "Agnoxis" and "fixie"</p>
+
+  <br>
+
   <div>
     <label>BGG Username:
       <input type="text" name="username" ng-model="username">
@@ -26,6 +32,8 @@
       </p>
   </div>
 
+  <br>
+
   <div ng-if="storage.savedUsers">
     <h2>Saved Collections</h2>
       <ul style="list-style: none">
@@ -35,7 +43,7 @@
       </ul>
   </div>
 
-<p ng-if="thisUserCollection">{{thisUserCollection}}</p>
-  
+  <p ng-if="thisUserCollection">{{thisUserCollection}}</p>
+
 
 </div>
