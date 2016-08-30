@@ -80,22 +80,17 @@ angular.module('wats4000ApplicationApp')
 
     $scope.displayCollection = function(user) {
       var buttonName = user;
-      console.log(buttonName);
-
       var collectionArray = JSON.parse(localStorage.getItem(localStorage.key(0)));
+
       //var userCollection = collectionArray[0].games;
       for (var i=0; i <collectionArray.length; i++) {
         if (collectionArray[i].user === buttonName){
-          $scope.thisUserCollection = collectionArray[i].games;
+          $scope.thisUserCollection = collectionArray[i].games.join(" " + "|" + " ");
+
         } else {
-          //alert("Couldn't find this collection");  
+          //alert("Couldn't find this collection");
         }
-
       }
-
     };
-
-    //var objectOne = JSON.parse(localStorage.getItem(localStorage.key(0)));
-    //console.log(objectOne);
 
   });
